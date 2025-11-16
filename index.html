@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammed Fahim — Data Science Portfolio</title>
+  <meta name="description" content="MSc Data Science student at the University of Salford. Projects in Python, ML, PySpark, SQL, and Web." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10; --panel:#101318; --muted:#b3b7c0; --text:#e7ebf3; --brand:#38bdf8; --accent:#22c55e; --border:#1f2a37; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:linear-gradient(180deg,#090c10, #0b0d10 40%, #0a0f14); color:var(--text)}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin-inline:auto; padding:24px}
+    header.site{position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px); background:rgba(11,13,16,.65); border-bottom:1px solid var(--border); z-index:50}
+    .site-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--accent)}
+    nav a{padding:10px 12px; border-radius:10px; color:var(--muted); font-weight:600}
+    nav a:hover{background:rgba(56,189,248,.08); color:var(--text)}
+    .menu-btn{display:none; background:transparent; color:var(--text); border:1px solid var(--border); padding:8px 10px; border-radius:10px}
+    .hero{padding:64px 0}
+    .hero-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center}
+    .card{background:linear-gradient(180deg,#0e141b,#0c1218); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow)}
+    .card.pad{padding:28px}
+    .pill{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background:rgba(56,189,248,.12); color:#c8ecff; border:1px solid rgba(56,189,248,.25); font-weight:700; font-size:12px}
+    .title{font-size:42px; line-height:1.1; margin:14px 0 10px}
+    .muted{color:var(--muted)}
+    .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid var(--border); background:#0d1620; color:var(--text); font-weight:700}
+    .btn.primary{background:linear-gradient(180deg,#0ea5e9,#0284c7); border-color:#0ea5e9}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .portrait{aspect-ratio:1/1; border-radius:16px; overflow:hidden; border:1px solid var(--border)}
+    .portrait img{object-fit:cover; width:100%; height:100%}
+    section{padding:56px 0}
+    .section-title{font-size:28px; margin:0 0 14px}
+    .about{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .list{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}
+    .chip{background:#0d1420; border:1px solid var(--border); padding:8px 10px; border-radius:10px; color:#c9d7e4; font-weight:600; width:fit-content}
+    .cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+    .project{display:flex; flex-direction:column}
+    /* Certificates grid */
+    .certgrid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
+    .cert{display:flex; flex-direction:column; gap:10px}
+    .cert .thumb{border:1px solid var(--border); border-radius:14px; overflow:hidden; background:#0c1218}
+    .cert .thumb img{display:block; width:100%; height:auto}
+    footer{padding:30px 0; border-top:1px solid var(--border); color:var(--muted); font-size:14px}
+    @media (max-width:1000px){.hero-wrap{grid-template-columns:1fr}.about{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:720px){nav{display:none}.menu-btn{display:inline-flex}.cards{grid-template-columns:1fr}.certgrid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container site-inner">
+      <div class="brand"><span class="dot"></span><span>Muhammed Fahim</span></div>
+      <nav aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" onclick="document.querySelector('nav').style.display = document.querySelector('nav').style.display==='block'?'none':'block'">Menu</button>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-wrap">
+      <section class="card pad">
+        <span class="pill">🎓 MSc Data Science • University of Salford</span>
+        <h1 class="title">Turning <span style="color:var(--brand)">data</span> into useful products</h1>
+        <p class="muted">I'm <strong>Muhammed Fahim Englampurath</strong>, a Data Science student with a B.Tech in IT (CUSAT). I build predictive models, recommender systems, and data apps using Python, SQL, and PySpark.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="https://github.com/MUHAMMEDFAHIM-2" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/muhammed-fahim-03209b1bb/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </section>
+      <aside class="card portrait"><img src="imgs/main.jpg" alt="Portrait of Muhammed Fahim" loading="lazy"></aside>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="container about">
+      <div class="card pad">
+        <h2 class="section-title">About</h2>
+        <p class="muted">MSc Data Science student at the <strong>University of Salford (UK)</strong> and B.Tech in IT from <strong>CUSAT, India</strong>. Ex‑<strong>UUC</strong>, <strong>SAIT President (2021–2022)</strong>, and <strong>SAIT Outreach Head</strong>. Focused on pragmatic ML and clean data pipelines.</p>
+        <p class="muted">Interests: time‑series forecasting, recommendation systems, SQL optimization, and Pythonic automation.</p>
+      </div>
+      <div class="card pad">
+        <h3 class="section-title">Skills</h3>
+        <div class="list">
+          <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">scikit‑learn</span><span class="chip">PySpark</span><span class="chip">SQL</span><span class="chip">Matplotlib</span><span class="chip">Git/GitHub</span><span class="chip">HTML/CSS/JS</span><span class="chip">Data Viz</span>
+        </div>
+        <h4 style="margin-top:18px">Soft skills</h4>
+        <div class="list"><span class="chip">Leadership</span><span class="chip">Time Management</span><span class="chip">Adaptability</span><span class="chip">Collaboration</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="muted" style="margin-bottom:18px">Selected work. See more on my <a href="https://github.com/MUHAMMEDFAHIM-2" target="_blank" rel="noopener">GitHub</a>.</p>
+      <div class="cards">
+        <!-- Data Science first -->
+        <article class="card pad project">
+          <h3>Big Data Email Analysis</h3>
+          <p class="muted meta">PySpark • Pandas • Notebook</p>
+          <p class="muted">Distributed processing of large email datasets to answer analytical questions and surface insights at scale.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/big-data-email-analysis" target="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>Clinical Trials — Spark SQL</h3>
+          <p class="muted meta">Databricks • Spark SQL • EDA</p>
+          <p class="muted">Exploration of 500k+ U.S. clinical trial records: durations, conditions, and trends using scalable SQL on Spark.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Clinical-Trials" target="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>Movie Recommender (ALS)</h3>
+          <p class="muted meta">PySpark • ALS • Recommenders</p>
+          <p class="muted">Collaborative filtering with ALS; tuning and evaluation with RMSE and ranking metrics.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Recommender-System" atarget="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>Demand Forecasting</h3>
+          <p class="muted meta">Time Series • Python</p>
+          <p class="muted">End‑to‑end demand forecasting with feature engineering and model comparison.</p>
+          <div class="actions"><a class="btn" href="#" aria-disabled="true" onclick="return false;">Repo (coming soon)</a></div>
+        </article>
+        <!-- SQL Projects -->
+        <article class="card pad project">
+          <h3>Online Shopping Platform — SQL</h3>
+          <p class="muted meta">T‑SQL • SSMS • Relational Design</p>
+          <p class="muted">Normalized retail schema, constraints, and analytical queries over customers, orders, items, and payments.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Online-Shopping-Platform-SQL" target="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>Airport Ticketing Environment — SQL</h3>
+          <p class="muted meta">T‑SQL • Schema • Stored Procedures</p>
+          <p class="muted">End‑to‑end relational design for ticketing: reservations, flights, employees; procedures, triggers, test data & queries.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Airport-Ticketing-Environment-SQL" target="_blank">View Repo</a></div>
+        </article>
+        <!-- Engineering/Apps -->
+        <article class="card pad project">
+          <h3>Aquamatics Backend</h3>
+          <p class="muted meta">Python • Flask • InfluxDB</p>
+          <p class="muted">IoT water quality monitoring backend: API endpoints, DB integration, and analytics for sensor data streams.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Aqua-Back-end" target="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>Aquamatics Frontend</h3>
+          <p class="muted meta">HTML/CSS/JS • Charts</p>
+          <p class="muted">Frontend dashboard for visualizing live water quality metrics with charts, documentation, and CI scaffolding.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Aqua-Front-end" target="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>ESSEN — Meal Share App</h3>
+          <p class="muted meta">Flutter • Firebase</p>
+          <p class="muted">Mobile app for hostel meal management and mass‑food sharing with role‑based interfaces and Firebase backend.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/Meal-Share-App" target="_blank">View Repo</a></div>
+        </article>
+        <article class="card pad project">
+          <h3>Hit the Gas — Python Racing Game</h3>
+          <p class="muted meta">Python • Pygame • Multimedia</p>
+          <p class="muted">2D racing game with player vs computer, collision masks, level progression, pause/resume, and background music.</p>
+          <div class="actions"><a class="btn" href="https://github.com/MUHAMMEDFAHIM-2/multimedia-python-game-hit-gas" target="_blank">View Repo</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <div class="container">
+      <h2 class="section-title">Certificates</h2>
+      <div class="certgrid">
+        <!-- 1. Duke -->
+        <article class="card pad cert">
+          <a class="thumb" href="certificates/duke-python-pandas.png" target="_blank"><img src="certificates/duke-python-pandas.png" alt="Python and Pandas for Data Engineering — Duke University (Coursera)"></a>
+          <div>
+            <strong>Python and Pandas for Data Engineering</strong>
+            <div class="muted">Duke University — Coursera</div>
+          </div>
+        </article>
+        <!-- 2. Google Crash Course -->
+        <article class="card pad cert">
+          <a class="thumb" href="certificates/google-crash-course-python.png" target="_blank"><img src="certificates/google-crash-course-python.png" alt="Crash Course on Python — Google (Coursera)"></a>
+          <div>
+            <strong>Crash Course on Python</strong>
+            <div class="muted">Google — Coursera</div>
+          </div>
+        </article>
+        <!-- 3. NPTEL Python -->
+        <article class="card pad cert">
+          <a class="thumb" href="certificates/nptel-python.jpg" target="_blank"><img src="certificates/nptel-python.jpg" alt="NPTEL Python Programming"></a>
+          <div>
+            <strong>Python Programming</strong>
+            <div class="muted">NPTEL (Govt. of India)</div>
+          </div>
+        </article>
+        <!-- 4. Kaggle Python -->
+        <article class="card pad cert">
+          <a class="thumb" href="certificates/kaggle-python.png" target="_blank"><img src="certificates/kaggle-python.png" alt="Kaggle Python"></a>
+          <div>
+            <strong>Python</strong>
+            <div class="muted">Kaggle</div>
+          </div>
+        </article>
+        <!-- 5. Leadership -->
+        <article class="card pad cert">
+          <a class="thumb" href="certificates/leadership.png" target="_blank"><img src="certificates/leadership.png" alt="Leadership Workshop Certificate"></a>
+          <div>
+            <strong>Leadership Workshop</strong>
+            <div class="muted">Government of India — Strategic Leadership Programme</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="card pad" style="display:flex; flex-direction:column; gap:12px">
+        <h2 class="section-title">Get in touch</h2>
+        <div class="actions" style="flex-wrap:wrap">
+          <a class="btn primary" href="mailto:fahim2122002@gmail.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/muhammed-fahim-03209b1bb/" target="_blank">LinkedIn</a>
+          <a class="btn" href="https://github.com/MUHAMMEDFAHIM-2" target="_blank">GitHub</a>
+          <a class="btn" href="https://wa.me/+919656574265" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Muhammed Fahim. All rights reserved.</span>
+      <div style="display:flex;gap:10px">
+        <a href="https://github.com/MUHAMMEDFAHIM-2" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/muhammed-fahim-03209b1bb/" target="_blank">LinkedIn</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
