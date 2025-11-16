@@ -60,3 +60,41 @@ All displayed as images on the portfolio in a two-column grid layout.
 1. Clone this repository:
    ```bash
    git clone https://github.com/MUHAMMEDFAHIM-2/portfolio.git
+2. Open the folder and ensure all certificate images are inside:
+
+certificates/
+  duke-python-pandas.png
+  google-crash-course-python.png
+  nptel-python.jpg
+  kaggle-python.png
+  leadership.png
+
+
+3. Commit & push changes.
+
+4. Go to Settings → Pages → Source → main branch → / (root).
+
+5. Wait a few minutes and visit:
+
+   https://muhammedfahim-2.github.io/portfolio/
+
+---
+
+📬 Contact
+
+Email: fahim2122002@gmail.com
+
+LinkedIn: linkedin.com/in/muhammed-fahim-03209b1bb
+
+GitHub: github.com/MUHAMMEDFAHIM-2
+
+WhatsApp: +91 9656574265
+
+🤖 Acknowledgement
+
+This portfolio was built in collaboration with ChatGPT (OpenAI) — leveraging AI to assist with design structure, responsive layout, and content polishing.
+
+🧾 License
+
+This project is open-source under the MIT License.
+You’re welcome to fork and adapt it for personal use with attribution.
